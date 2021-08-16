@@ -11,10 +11,14 @@
         <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
+            <a class="nav-link active" aria-current="page">
+                <router-link to="/">Home</router-link>
+            </a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="/about">About</a>
+            <a class="nav-link">
+                <router-link to="/about">About</router-link>
+            </a>
             </li>
             <li class="nav-item">
             <a class="nav-link" href="#">Pricing</a>
@@ -34,6 +38,13 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+a {
+    text-decoration: none;
+    color: #222;
+}
+a.router-link-exact-active {
+  color: #42b983;
+  font-weight: bold;
+}
 </style>
